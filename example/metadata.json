@@ -1,4 +1,5 @@
 {
+    "compression": "targz",
     "softlink": [
         {
             "from": "g++",

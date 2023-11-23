@@ -83,7 +83,7 @@ def source_install(code: Annotated[str, typer.Argument(help="the package name yo
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
-                cached=(sha256obj.hexdigest().upper()==info[id]["files"]["source"]["sha256"])
+                cached=(sha256obj.hexdigest()==info[id]["files"]["source"]["sha256"].lower())
         if not cached:
             import requests
             resp=requests.get(info[id]["files"]["source"]["url"],stream=True)
@@ -96,7 +96,7 @@ def source_install(code: Annotated[str, typer.Argument(help="the package name yo
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json"), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
-                cached=(sha256obj.hexdigest().upper()==info[id]["files"]["manifest"]["sha256"])
+                cached=(sha256obj.hexdigest()==info[id]["files"]["manifest"]["sha256"].lower())
         if not cached:
             import requests
             resp=requests.get(info[id]["files"]["manifest"]["url"],stream=True)
@@ -123,7 +123,7 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
-                cached=(sha256obj.hexdigest().upper()==info[id]["files"]["source"]["sha256"])
+                cached=(sha256obj.hexdigest()==info[id]["files"]["source"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Source Zip cache found. Please cache it first. :boom:")
         cached=False
@@ -132,7 +132,7 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json"), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
-                cached=(sha256obj.hexdigest().upper()==info[id]["files"]["manifest"]["sha256"])
+                cached=(sha256obj.hexdigest()==info[id]["files"]["manifest"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Manifest cache found. Please cache it first. :boom:")
         

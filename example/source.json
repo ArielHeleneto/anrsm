@@ -1,24 +1,90 @@
 [
     {
-        "name": "upstream",
-        "version": "20231110",
+        "name": "plct",
+        "version": "20231026",
         "versioncode": 1,
         "tag": [
             "binary",
             "toolchain"
         ],
-        "desc": "RuyiSDK RISC-V Linux Toolchain 20231110 (Upstream sources)",
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231026 (maintained by PLCT)",
         "origin": "PLCT Lab",
         "files": {
             "source": {
-                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.zip",
-                "sha256": "AAE02527C7FA9DC12342E089DE64BC25DE5CCDDBB630FB57F9F568771CC3286E"
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231026-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "2ae0ad6b513a8cb9541cb6a3373d7d1517a8848137b27cc64823582d3e9c01de"
+            },
+            "manifest": {
+                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
+                "sha256": "2994ecf3de6ad0ea7e1f162a4e7cb7e862fbcaa1710f71dbb1c471420c21e5ad"
+            }
+        },
+        "arch": "x86"
+    },
+    {
+        "name": "plct",
+        "version": "20231026",
+        "versioncode": 1,
+        "tag": [
+            "binary",
+            "toolchain"
+        ],
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231026 (maintained by PLCT)",
+        "origin": "PLCT Lab",
+        "files": {
+            "source": {
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231026-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "6e7f269e52afd07b5fb03d1d96666fa12561586e5558fc841cb81bb35f2e3b9b"
+            },
+            "manifest": {
+                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
+                "sha256": "2994ecf3de6ad0ea7e1f162a4e7cb7e862fbcaa1710f71dbb1c471420c21e5ad"
+            }
+        },
+        "arch": "riscv64"
+    },
+    {
+        "name": "plct",
+        "version": "20231110",
+        "versioncode": 2,
+        "tag": [
+            "binary",
+            "toolchain"
+        ],
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231026 (maintained by PLCT)",
+        "origin": "PLCT Lab",
+        "files": {
+            "source": {
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "3d5bcb254bfa4a0990ae6e5592047ba362da03c8a34e204574f614d99293b489"
             },
             "manifest": {
                 "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
                 "sha256": "2994ECF3DE6AD0EA7E1F162A4E7CB7E862FBCAA1710F71DBB1C471420C21E5AD"
             }
         },
-        "arch": "x86_64"
+        "arch": "riscv64"
+    },
+    {
+        "name": "plct",
+        "version": "20231110",
+        "versioncode": 2,
+        "tag": [
+            "binary",
+            "toolchain"
+        ],
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231026 (maintained by PLCT)",
+        "origin": "PLCT Lab",
+        "files": {
+            "source": {
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231110-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "e4f52c7a0b5660ae3430fd634b40ade24f79d14f3ba429e31fc2e24cfcb97953"
+            },
+            "manifest": {
+                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
+                "sha256": "2994ECF3DE6AD0EA7E1F162A4E7CB7E862FBCAA1710F71DBB1C471420C21E5AD"
+            }
+        },
+        "arch": "x86"
     }
 ]
