@@ -126,15 +126,17 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
                 cached=(sha256obj.hexdigest()==info[id]["files"]["source"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Source Zip cache found. Please cache it first. :boom:")
+            raise typer.Exit()
         cached=False
         if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])):
             import hashlib
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]), "rb") as f:
                 sha256obj = hashlib.sha256()
-                sha256obj.update(f.read())
+                sha256obj.update(f.read())          
                 cached=(sha256obj.hexdigest()==info[id]["files"]["manifest"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Manifest cache found. Please cache it first. :boom:")
+            raise typer.Exit()
         
         with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])) as mani:
             import json
