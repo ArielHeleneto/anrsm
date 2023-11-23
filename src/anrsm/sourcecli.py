@@ -38,7 +38,7 @@ def source_list():
         import json
         info=json.load(file)        
         for data in track(info, description="Parsing..."):
-            table.add_row(data["name"]+"@"+data["version"], ', '.join(data["tag"]), data["arch"])
+            table.add_row(data['name']+"@"+data['version'], ', '.join(data['tag']), data['arch'])
         console = Console()
         console.print(table)
 
@@ -55,13 +55,13 @@ def source_info(code: Annotated[str, typer.Argument(help="the package name you w
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         import json
         info=json.load(file)
-        print(f"[green]Name[/green]: {info[id]["name"]}")
-        print(f"[green]Version[/green]: {info[id]["version"]}")
-        print(f"[green]Version Code[/green]: {info[id]["versioncode"]}")
-        print(f"[green]Source Type[/green]: {', '.join(info[id]["tag"])}")
-        print(f"[green]Description[/green]: {info[id]["desc"]}")
-        print(f"[green]Origin[/green]: {info[id]["origin"]}")
-        print(f"[green]Arch[/green]: {info[id]["arch"]}")
+        print(f"Name: {info[id]['name']}")
+        print(f"Version: {info[id]['version']}")
+        print(f"Version Code: {info[id]['versioncode']}")
+        print(f"Source Type: {', '.join(info[id]['tag'])}")
+        print(f"Description: {info[id]['desc']}")
+        print(f"Origin: {info[id]['origin']}")
+        print(f"Arch: {info[id]['arch']}")
 
 @app.command("cache")
 def source_install(code: Annotated[str, typer.Argument(help="the package name you want to download. Put @+version to get a specify version",metavar="Package Name")]):
@@ -163,7 +163,7 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
                 import json
                 mmm=json.load(mani)
                 for link in track(mmm["softlink"], description="Building softlink..."):
-                    print(f"[green]Info:[/green]  {os.path.join(settings["softlink"],link["from"])} [grey]->[/grey] {os.path.join(dest,link["to"])}")
+                    print(f"[green]Info:  {os.path.join(settings["softlink"],link["from"])} [grey]->[/grey] {os.path.join(dest,link["to"])}")
                     os.symlink(os.path.join(dest,link["to"]),os.path.join(settings["softlink"],link["from"]))
 
 if __name__ == "__main__":
