@@ -1,0 +1,3 @@
+cargocache = "./tmp"
+sourceurl = "https://ap.ariels.xyz:6086/anrsm/source.json"
+softlink = "E:/Git/anrsm/tmp/soft"

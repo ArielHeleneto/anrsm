@@ -1,0 +1,20 @@
+import os
+from config.config import settings
+from rich.progress import track
+def find_source_id(code: str):
+    # find the target
+    x = code.split("@", 1)
+    with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
+        import json
+        info=json.load(file)
+        id=-1
+        for data in range(0,len(info)):
+            if info[data]["name"]==x[0] and len(x)==1:
+                if id==-1:
+                    id=data
+                elif info[data]["versioncode"]>info[data]["versioncode"]:
+                    id=data
+            elif info[data]["name"]==x[0] and info[data]["version"]==x[1]:
+                id=data
+                break
+        return id

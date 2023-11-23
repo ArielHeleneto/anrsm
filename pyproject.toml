@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "anrsm"
+version = "0.1.0"
+description = ""
+authors = ["Ariel Xiong <ArielHeleneto@outlook.com>"]
+readme = "README.md"
+packages = [{include = "anrsm", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.9.0"
+dynaconf = "^3.2.4"
+requests = "^2.31.0"
+rich = "^13.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
