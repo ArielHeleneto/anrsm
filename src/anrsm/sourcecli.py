@@ -136,9 +136,17 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
         if not cached:
             print("[bold red]Error[/bold red]: No Manifest cache found. Please cache it first. :boom:")
         
-        import zipfile
-        with zipfile.ZipFile(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), 'r') as file:
-            file.extractall(dest)
+        with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")) as mani:
+                import json
+                mmm=json.load(mani)
+                if mmm["compression"]=="zip":
+                    import zipfile
+                    with zipfile.ZipFile(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), 'r') as file:
+                        file.extractall(dest)
+                elif mmm["compression"]=="targz":
+                    import tarfile
+                    with tarfile.open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".tar.gz")) as tf:
+                        tf.extractall(dest)
         
         if softlink:
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")) as mani:
