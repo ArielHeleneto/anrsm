@@ -1,0 +1,38 @@
+name: CI
+on: push
+
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+        # python-version: ["3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+        os: [ubuntu-22.04]
+        # os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env: 
+      RUYI: poetry run python ./src/anrsm/cli.py
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: prepare
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          poetry install
+      - name: ruyi hullo
+        run: |
+          $RUYI hullo
+      - name: ruyi config
+        run: |
+          $RUYI config set a 1
+          $RUYI config get a | grep 1
+          $RUYI config unset a
+          $RUYI config get a | grep None
+      - name: ruyi sourse
+        run: |
+          $RUYI source list
+          $RUYI source update
+          $RUYI source list
