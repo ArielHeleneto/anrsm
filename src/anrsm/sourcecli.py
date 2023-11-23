@@ -163,8 +163,8 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
                 import json
                 mmm=json.load(mani)
                 for link in track(mmm['softlink'], description="Building softlink..."):
-                    print(f"[green]Info:  {os.path.join(settings['softlink'],link["from"])} [grey]->[/grey] {os.path.join(dest,link["to"])}")
-                    os.symlink(os.path.join(dest,link["to"]),os.path.join(settings['softlink'],link["from"]))
+                    print(f"[green]Info:  {os.path.join(settings['softlink'],link['from'])} [grey]->[/grey] {os.path.join(dest,link['to'])}")
+                    os.symlink(os.path.join(dest,link['to']),os.path.join(settings['softlink'],link['from']))
 
 if __name__ == "__main__":
     app()
