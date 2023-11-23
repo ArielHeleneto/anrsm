@@ -27,12 +27,17 @@ jobs:
           $RUYI hullo
       - name: ruyi config
         run: |
-          $RUYI config set a 1
-          $RUYI config get a | grep 1
-          $RUYI config unset a
-          $RUYI config get a | grep None
+          $RUYI config set softlink ~/softlink
+          $RUYI config get softlink
       - name: ruyi sourse
         run: |
-          $RUYI source list
           $RUYI source update
           $RUYI source list
+      - name: create dir
+        run: |
+          mkdir ~/softlink
+          mkdir ~/target
+      - name: ruyi sourse
+        run: |
+          $RUYI source cache plct@20231110
+          $RUYI source expand plct@20231110 ~/target --softlink
