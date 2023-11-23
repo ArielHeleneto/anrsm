@@ -15,8 +15,8 @@
                 "sha256": "2ae0ad6b513a8cb9541cb6a3373d7d1517a8848137b27cc64823582d3e9c01de"
             },
             "manifest": {
-                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
-                "sha256": "2994ecf3de6ad0ea7e1f162a4e7cb7e862fbcaa1710f71dbb1c471420c21e5ad"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
+                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
             }
         },
         "arch": "x86"
@@ -37,8 +37,8 @@
                 "sha256": "6e7f269e52afd07b5fb03d1d96666fa12561586e5558fc841cb81bb35f2e3b9b"
             },
             "manifest": {
-                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
-                "sha256": "2994ecf3de6ad0ea7e1f162a4e7cb7e862fbcaa1710f71dbb1c471420c21e5ad"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
+                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
             }
         },
         "arch": "riscv64"
@@ -59,8 +59,8 @@
                 "sha256": "3d5bcb254bfa4a0990ae6e5592047ba362da03c8a34e204574f614d99293b489"
             },
             "manifest": {
-                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
-                "sha256": "2994ECF3DE6AD0EA7E1F162A4E7CB7E862FBCAA1710F71DBB1C471420C21E5AD"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
+                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
             }
         },
         "arch": "riscv64"
@@ -81,8 +81,8 @@
                 "sha256": "e4f52c7a0b5660ae3430fd634b40ade24f79d14f3ba429e31fc2e24cfcb97953"
             },
             "manifest": {
-                "url": "https://ap.ariels.xyz:6086/anrsm/zip/bin.json",
-                "sha256": "2994ECF3DE6AD0EA7E1F162A4E7CB7E862FBCAA1710F71DBB1C471420C21E5AD"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
+                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
             }
         },
         "arch": "x86"

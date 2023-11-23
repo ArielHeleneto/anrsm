@@ -32,7 +32,7 @@ def source_list():
     from rich.table import Table
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         table = Table(title="Available Package")
-        table.add_column("Uunique Code", justify="left", style="cyan")
+        table.add_column("Unique Code", justify="left", style="cyan")
         table.add_column("Source Type")
         table.add_column("Architecture", justify="left", style="green")
         import json
@@ -78,29 +78,29 @@ def source_install(code: Annotated[str, typer.Argument(help="the package name yo
         import json
         info=json.load(file)
         cached=False
-        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip")):
+        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"])):
             import hashlib
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), "rb") as f:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
                 cached=(sha256obj.hexdigest()==info[id]["files"]["source"]["sha256"].lower())
         if not cached:
             import requests
             resp=requests.get(info[id]["files"]["source"]["url"],stream=True)
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"),'wb') as file:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]),'wb') as file:
                 for data in track(resp.iter_content(chunk_size=1024), description="Downloading Source Zip..."):
                     file.write(data)
         cached=False
-        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")):
+        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])):
             import hashlib
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json"), "rb") as f:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
                 cached=(sha256obj.hexdigest()==info[id]["files"]["manifest"]["sha256"].lower())
         if not cached:
             import requests
             resp=requests.get(info[id]["files"]["manifest"]["url"],stream=True)
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json"),'wb') as file:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]),'wb') as file:
                 for data in track(resp.iter_content(chunk_size=1024), description="Downloading Manifest..."):
                     file.write(data)
 
@@ -118,35 +118,43 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
         import json
         info=json.load(file)
         cached=False
-        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip")):
+        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"])):
             import hashlib
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), "rb") as f:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
                 cached=(sha256obj.hexdigest()==info[id]["files"]["source"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Source Zip cache found. Please cache it first. :boom:")
         cached=False
-        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")):
+        if os.path.exists(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])):
             import hashlib
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json"), "rb") as f:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]), "rb") as f:
                 sha256obj = hashlib.sha256()
                 sha256obj.update(f.read())
                 cached=(sha256obj.hexdigest()==info[id]["files"]["manifest"]["sha256"].lower())
         if not cached:
             print("[bold red]Error[/bold red]: No Manifest cache found. Please cache it first. :boom:")
         
-        with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")) as mani:
-                import json
-                mmm=json.load(mani)
-                if mmm["compression"]=="zip":
-                    import zipfile
-                    with zipfile.ZipFile(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".zip"), 'r') as file:
-                        file.extractall(dest)
-                elif mmm["compression"]=="targz":
-                    import tarfile
-                    with tarfile.open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]+".tar.gz")) as tf:
-                        tf.extractall(dest)
+        with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])) as mani:
+            import json
+            mmm=json.load(mani)
+            if mmm["compression"]=="zip":
+                import zipfile
+                with zipfile.ZipFile(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]), 'r') as file:
+                    file.extractall(dest)
+            elif mmm["compression"]=="targz":
+                import tarfile
+                with tarfile.open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]),mode="r:gz") as tf:
+                    tf.extractall(dest)
+            elif mmm["compression"]=="tarxz":
+                import tarfile
+                with tarfile.open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]),mode="r:xz") as tf:
+                    tf.extractall(dest)
+            elif mmm["compression"]=="tarbz2":
+                import tarfile
+                with tarfile.open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]),mode="r:bz2") as tf:
+                    tf.extractall(dest)
         
         if softlink:
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")) as mani:
