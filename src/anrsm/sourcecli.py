@@ -159,7 +159,7 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
                     tf.extractall(dest)
         
         if softlink:
-            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"]+".json")) as mani:
+            with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["manifest"]["sha256"])) as mani:
                 import json
                 mmm=json.load(mani)
                 for link in track(mmm['softlink'], description="Building softlink..."):
