@@ -59,8 +59,8 @@
                 "sha256": "3d5bcb254bfa4a0990ae6e5592047ba362da03c8a34e204574f614d99293b489"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
-                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadataplct.json",
+                "sha256": "a7865032e304f26019538fa775e71b19beb041166fce9c959a4fed70e370a56d"
             }
         },
         "arch": "riscv64"
@@ -81,8 +81,8 @@
                 "sha256": "e4f52c7a0b5660ae3430fd634b40ade24f79d14f3ba429e31fc2e24cfcb97953"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadata.json",
-                "sha256": "a38a4bbfc9cb36e77607d825136c827619c3eb8b1f0325bf3cfea1961a902796"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/metadataplct.json",
+                "sha256": "a7865032e304f26019538fa775e71b19beb041166fce9c959a4fed70e370a56d"
             }
         },
         "arch": "x86"
