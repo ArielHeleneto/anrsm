@@ -5,11 +5,15 @@ from typing import Optional
 from rich.progress import track
 import os
 from source.source import find_source_id
+from rich import print
 
 app = typer.Typer()
 
 @app.command("update")
-def source_update(sourceurl: Annotated[Optional[str], typer.Argument()] = None):
+def source_update(sourceurl: Annotated[Optional[str], typer.Argument(help="Set this item if you wish to use this source temporarily.")] = None):
+    """
+    Update the source file.
+    """
     if sourceurl != None:
         settings.set("sourceurl",sourceurl)
     import requests
@@ -21,6 +25,9 @@ def source_update(sourceurl: Annotated[Optional[str], typer.Argument()] = None):
 
 @app.command("list")
 def source_list():
+    """
+    List all package.
+    """
     from rich.console import Console
     from rich.table import Table
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
@@ -36,7 +43,10 @@ def source_list():
         console.print(table)
 
 @app.command("info")
-def source_info(code: str):
+def source_info(code: Annotated[str, typer.Argument(help="the package name you want to look inside. Put @+version to see a specify version",metavar="Package Name")]):
+    """
+    Print the detailed information for package.
+    """
     from rich import print
     id=find_source_id(code)
     if id==-1:
@@ -54,7 +64,10 @@ def source_info(code: str):
         print(f"[green]Arch[/green]: {info[id]["arch"]}")
 
 @app.command("cache")
-def source_install(code: str):
+def source_install(code: Annotated[str, typer.Argument(help="the package name you want to download. Put @+version to get a specify version",metavar="Package Name")]):
+    """
+    Download a package.
+    """
     id=find_source_id(code)
     if id==-1:
         print("[bold red]Error[/bold red]: No matches found. :boom:")
@@ -92,7 +105,10 @@ def source_install(code: str):
                     file.write(data)
 
 @app.command("expand")
-def source_expand(code: str,dest: str,softlink: bool = False):
+def source_expand(code: Annotated[str, typer.Argument(help="the package name you want to look inside. Put @+version to see a specify version",metavar="Package Name")],dest: Annotated[str, typer.Argument(help="the destination you want to put this package to.",metavar="Destination")],softlink: Annotated[bool,typer.Option(help="Build softlink")] = False):
+    """
+    Expand package.
+    """
     id=find_source_id(code)
     if id==-1:
         print("[bold red]Error[/bold red]: No matches found. :boom:")
@@ -129,8 +145,8 @@ def source_expand(code: str,dest: str,softlink: bool = False):
                 import json
                 mmm=json.load(mani)
                 for link in track(mmm["softlink"], description="Building softlink..."):
+                    print(f"[green]Info:[/green]  {os.path.join(settings["softlink"],link["from"])} [grey]->[/grey] {os.path.join(dest,link["to"])}")
                     os.symlink(os.path.join(dest,link["to"]),os.path.join(settings["softlink"],link["from"]))
-            
 
 if __name__ == "__main__":
     app()

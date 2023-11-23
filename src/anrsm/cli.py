@@ -4,13 +4,13 @@ import configcli
 import sourcecli
 
 app=typer.Typer()
-app.add_typer(configcli.app,name="config")
-app.add_typer(sourcecli.app,name="source")
+app.add_typer(configcli.app,name="config",help="Permanently sets program-related variables.")
+app.add_typer(sourcecli.app,name="source",help="Commands on updating and downloading packages.")
 
 @app.command("hullo")
 def hullo():
     '''
-    Print a hullo message and some position of config files.
+    Print a hullo message.
     '''
     print("Hullo! This is Another RISC-V SDK Manager!")
 
