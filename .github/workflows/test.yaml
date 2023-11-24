@@ -20,14 +20,29 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: create dir
         run: |
-          mkdir ~/cargocache
-          mkdir ~/softlink
-          mkdir ~/target
+          mkdir -p ~/cargocache
+          mkdir -p ~/cargocache/cache
+          mkdir -p ~/softlink
+          mkdir -p ~/target
           ls ~
-      - name: prepare
+      - name: install poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
+      
+      - name: prepare(macos)
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: |
+            export PATH="/Users/runner/.local/bin:$PATH"
+            echo $PATH
+      - name: prepare(windows)          
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: |
+            $ENV:PATH="$ENV:PATH;C:\Users\runneradmin\AppData\Roaming\Python\Scripts"
+            $ENV:PATH
+      - name: install deps
+        run: |
           poetry install
+
       - name: ruyi hullo
         run: |
           $RUYI hullo
@@ -35,11 +50,19 @@ jobs:
         run: |
           $RUYI config set softlink ~/softlink
           $RUYI config get softlink
-      - name: ruyi sourse
+          $RUYI config set cargocache /home/runner/cargocache
+      - name: ruyi source
         run: |
           $RUYI source update
           $RUYI source list
-      - name: ruyi sourse
+      - name: ruyi cache
         run: |
           $RUYI source cache plct@20231110
           $RUYI source expand plct@20231110 ~/target --softlink
+      - name: ruyi build
+        run: |
+          # git add . && git commit -m "fix ci" && git push
+          poetry build
+          tree .
+          python -m pip install dist/anrsm-0.1.0-py3-none-any.whl
+          python -m anrsm hullo

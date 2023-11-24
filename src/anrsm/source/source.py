@@ -1,5 +1,5 @@
 import os
-from config.config import settings
+from anrsm.config.config import settings
 from rich.progress import track
 def find_source_id(code: str):
     # find the target

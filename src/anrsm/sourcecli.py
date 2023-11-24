@@ -1,10 +1,10 @@
 import typer
-from config.config import settings
+from anrsm.config.config import settings
 from typing_extensions import Annotated
 from typing import Optional
 from rich.progress import track
 import os
-from source.source import find_source_id
+from anrsm.source.source import find_source_id
 from rich import print
 
 app = typer.Typer()
