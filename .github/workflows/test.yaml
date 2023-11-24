@@ -12,7 +12,7 @@ jobs:
         # os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     env: 
-      RUYI: poetry run python ./src/anrsm/cli.py
+      ANRSM: python -m anrsm
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -42,27 +42,25 @@ jobs:
       - name: install deps
         run: |
           poetry install
-
-      - name: ruyi hullo
+      - name: build
         run: |
-          $RUYI hullo
-      - name: ruyi config
-        run: |
-          $RUYI config set softlink ~/softlink
-          $RUYI config get softlink
-          $RUYI config set cargocache /home/runner/cargocache
-      - name: ruyi source
-        run: |
-          $RUYI source update
-          $RUYI source list
-      - name: ruyi cache
-        run: |
-          $RUYI source cache plct@20231110
-          $RUYI source expand plct@20231110 ~/target --softlink
-      - name: ruyi build
-        run: |
-          # git add . && git commit -m "fix ci" && git push
           poetry build
-          tree .
+      - name: install
+        run: |
           python -m pip install dist/anrsm-0.1.0-py3-none-any.whl
-          python -m anrsm hullo
+      - name: test hullo
+        run: |
+          $ANRSM hullo
+      - name: test config
+        run: |
+          $ANRSM config set softlink ~/softlink
+          $ANRSM config get softlink
+          $ANRSM config set cargocache /home/runner/cargocache
+      - name: test source
+        run: |
+          $ANRSM source update
+          $ANRSM source list
+      - name: test cache
+        run: |
+          $ANRSM source cache plct@20231110
+          $ANRSM source expand plct@20231110 ~/target --softlink
