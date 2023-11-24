@@ -1,0 +1,149 @@
+{
+    "compression": "tarxz",
+    "softlink": [
+        {
+            "from": "size",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-size"
+        },
+        {
+            "from": "gdb",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gdb"
+        },
+        {
+            "from": "gcov-tool",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcov-tool"
+        },
+        {
+            "from": "g++",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-g++"
+        },
+        {
+            "from": "gdb-add-index",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gdb-add-index"
+        },
+        {
+            "from": "lto-dump",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-lto-dump"
+        },
+        {
+            "from": "strings",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-strings"
+        },
+        {
+            "from": "objdump",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-objdump"
+        },
+        {
+            "from": "ct-ng.config",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ct-ng.config"
+        },
+        {
+            "from": "gcov-dump",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcov-dump"
+        },
+        {
+            "from": "gcc",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcc"
+        },
+        {
+            "from": "readelf",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-readelf"
+        },
+        {
+            "from": "gcov",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcov"
+        },
+        {
+            "from": "c++",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-c++"
+        },
+        {
+            "from": "gcc-ranlib",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcc-ranlib"
+        },
+        {
+            "from": "nm",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-nm"
+        },
+        {
+            "from": "addr2line",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-addr2line"
+        },
+        {
+            "from": "gccgo",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gccgo"
+        },
+        {
+            "from": "c++filt",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-c++filt"
+        },
+        {
+            "from": "ld.bfd",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ld.bfd"
+        },
+        {
+            "from": "as",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-as"
+        },
+        {
+            "from": "gprof",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gprof"
+        },
+        {
+            "from": "ld",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ld"
+        },
+        {
+            "from": "ranlib",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ranlib"
+        },
+        {
+            "from": "objcopy",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-objcopy"
+        },
+        {
+            "from": "cc",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-cc"
+        },
+        {
+            "from": "strip",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-strip"
+        },
+        {
+            "from": "ldd",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ldd"
+        },
+        {
+            "from": "populate",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-populate"
+        },
+        {
+            "from": "ar",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-ar"
+        },
+        {
+            "from": "gcc-nm",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcc-nm"
+        },
+        {
+            "from": "cpp",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-cpp"
+        },
+        {
+            "from": "elfedit",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-elfedit"
+        },
+        {
+            "from": "gcc-13.1.0",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcc-13.1.0"
+        },
+        {
+            "from": "gfortran",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gfortran"
+        },
+        {
+            "from": "gcc-ar",
+            "to": "RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu/bin/riscv64-unknown-linux-gnu-gcc-ar"
+        }
+    ]
+}
