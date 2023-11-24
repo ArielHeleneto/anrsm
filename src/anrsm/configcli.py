@@ -1,5 +1,5 @@
 import typer
-from config.config import settings
+from anrsm.config.config import settings
 from typing_extensions import Annotated
 
 app = typer.Typer()

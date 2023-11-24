@@ -1,7 +1,7 @@
 import typer
 
-import configcli
-import sourcecli
+import anrsm.configcli as configcli
+import anrsm.sourcecli as sourcecli
 
 app=typer.Typer()
 app.add_typer(configcli.app,name="config",help="Permanently sets program-related variables.")
