@@ -12,9 +12,9 @@ def find_source_id(code: str):
             if info[data]["name"]==x[0] and len(x)==1 and info[data]["arch"]=="x86":
                 if id==-1:
                     id=data
-                elif info[data]["versioncode"]>info[data]["versioncode"]:
+                elif info[data]["versioncode"]>info[id]["versioncode"]:
                     id=data
-            elif info[data]["name"]==x[0] and info[data]["version"]==x[1] and info[data]["arch"]=="x86":
+            elif info[data]["name"]==x[0] and len(x)==2 and info[data]["version"]==x[1] and info[data]["arch"]=="x86":
                 id=data
                 break
-        return id
+    return id
