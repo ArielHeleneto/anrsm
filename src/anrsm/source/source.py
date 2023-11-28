@@ -21,7 +21,7 @@ def find_source_id(name: str, ver: str=None, arch: str=None):
                     break
     return id
 
-def sourcache_check(id: int):
+def sourcecache_check(id: int):
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         import json
         info=json.load(file)

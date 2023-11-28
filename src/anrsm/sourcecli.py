@@ -80,7 +80,7 @@ def source_install(name: Annotated[str, typer.Argument(help="the package name yo
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         import json
         info=json.load(file)        
-        if not sourcache_check(id):
+        if not sourcecache_check(id):
             import requests
             resp=requests.get(info[id]["files"]["source"]["url"],stream=True)
             with open(os.path.join(settings["cargocache"],"cache",info[id]["files"]["source"]["sha256"]),'wb') as file:
@@ -106,7 +106,7 @@ def source_expand(code: Annotated[str, typer.Argument(help="the package name you
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         import json
         info=json.load(file)
-        if not sourcache_check(id):
+        if not sourceache_check(id):
             print("[bold red]Error[/bold red]: No Source Zip cache found. Please cache it first. :boom:")
             raise typer.Exit()
         if not metacache_check(id):
