@@ -19,7 +19,7 @@
                 "sha256": "11c983975f96b3a9d26b98242c0a60727f477e64c3c2c75c75a4a852c7068a48"
             }
         },
-        "arch": "x86"
+        "arch": "x86_64"
     },
     {
         "name": "plct",
@@ -85,7 +85,7 @@
                 "sha256": "a7865032e304f26019538fa775e71b19beb041166fce9c959a4fed70e370a56d"
             }
         },
-        "arch": "x86"
+        "arch": "x86_64"
     },
     {
         "name": "upstream",
@@ -107,7 +107,7 @@
                 "sha256": "8c7090f16272bb40e616cbd62fe8d75a0022f4177249b3eb83a33fb9b1c997f9"
             }
         },
-        "arch": "x86"
+        "arch": "x86_64"
     },
     {
         "name": "upstream",
@@ -151,7 +151,7 @@
                 "sha256": "c6023adbf16a69ef9ab5c5fad0182eee091f4e04e3b6c33100ed13b8eaafe81a"
             }
         },
-        "arch": "x86"
+        "arch": "x86_64"
     },
     {
         "name": "T-head",
@@ -195,7 +195,7 @@
                 "sha256": "1b4936eb351961fb9d2c7d6eed397e4e4372469a5f3b6e29c1456a0459f3dbb0"
             }
         },
-        "arch": "x86"
+        "arch": "x86_64"
     },
     {
         "name": "T-head",
