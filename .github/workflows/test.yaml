@@ -64,4 +64,5 @@ jobs:
         run: |
           $ANRSM source cache --help
           $ANRSM source cache plct --version 20231110
+          $ANRSM source expand --help
           $ANRSM source expand plct ~/target --softlink --version 20231110

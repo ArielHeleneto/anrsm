@@ -45,7 +45,7 @@ def source_list():
         console.print(table)
 
 @app.command("info")
-def source_info(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[str, typer.Argument(default_factory=platform.machine,metavar="Architecture")],ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
+def source_info(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], ver: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
     """
     Print the detailed information for package.
     """
@@ -67,7 +67,7 @@ def source_info(name: Annotated[str, typer.Argument(help="the package name you w
         print(f"To cache this package, use `anrsm source cache {info[id]['name']} {info[id]['arch']} --version {info[id]['version']}")
 
 @app.command("cache")
-def source_install(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[str, typer.Argument(default_factory=platform.machine,metavar="Architecture")],ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
+def source_install(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
     """
     Download a package.
     """
@@ -94,11 +94,12 @@ def source_install(name: Annotated[str, typer.Argument(help="the package name yo
                     file.write(data)
 
 @app.command("expand")
-def source_expand(code: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[str, typer.Argument(default_factory=platform.machine,metavar="Architecture")],dest: Annotated[str, typer.Argument(help="the destination you want to put this package to.",metavar="Destination")],ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None,softlink: Annotated[bool,typer.Option(help="Build softlink")] = False):
+def source_expand(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], dest: Annotated[str, typer.Argument(help="the destination you want to put this package to.",metavar="Destination")],arch: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None,softlink: Annotated[bool,typer.Option(help="Build softlink")] = False):
+
     """
     Expand package.
     """
-    id=find_source_id(code)
+    id=find_source_id(name,ver,arch)
     if id==-1:
         print("[bold red]Error[/bold red]: No matches found. :boom:")
         raise typer.Exit()
