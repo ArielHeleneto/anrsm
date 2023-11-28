@@ -45,7 +45,7 @@ def source_list():
         console.print(table)
 
 @app.command("info")
-def source_info(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], ver: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
+def source_info(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
     """
     Print the detailed information for package.
     """
