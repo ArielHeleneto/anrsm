@@ -4,7 +4,7 @@ from typing_extensions import Annotated
 from typing import Optional
 from rich.progress import track
 import os
-from anrsm.source.source import find_source_id
+from anrsm.source.source import *
 from rich import print
 import platform
 
