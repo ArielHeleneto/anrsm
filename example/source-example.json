@@ -1,0 +1,24 @@
+[
+    {
+        "name": "plct",
+        "version": "20231026",
+        "versioncode": 1,
+        "tag": [
+            "binary",
+            "toolchain"
+        ],
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231026 (maintained by PLCT)",
+        "origin": "PLCT Lab",
+        "files": {
+            "source": {
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231026-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "2ae0ad6b513a8cb9541cb6a3373d7d1517a8848137b27cc64823582d3e9c01de"
+            },
+            "manifest": {
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231026-PLCT-Sources-riscv64-plct-linux-gnu.json",
+                "sha256": "11c983975f96b3a9d26b98242c0a60727f477e64c3c2c75c75a4a852c7068a48"
+            }
+        },
+        "arch": "x86"
+    }
+]
