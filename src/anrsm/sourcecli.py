@@ -107,7 +107,7 @@ def source_expand(name: Annotated[str, typer.Argument(help="the package name you
     with open(os.path.join(settings["cargocache"],"source.json"),'r') as file:
         import json
         info=json.load(file)
-        if not sourceache_check(id):
+        if not sourcecache_check(id):
             print("[bold red]Error[/bold red]: No Source Zip cache found. Please cache it first. :boom:")
             raise typer.Exit()
         if not metacache_check(id):
