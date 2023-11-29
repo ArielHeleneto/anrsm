@@ -37,30 +37,8 @@
                 "sha256": "6e7f269e52afd07b5fb03d1d96666fa12561586e5558fc841cb81bb35f2e3b9b"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231026-PLCT-Sources-riscv64-plct-linux-gnu.json",
-                "sha256": "11c983975f96b3a9d26b98242c0a60727f477e64c3c2c75c75a4a852c7068a48"
-            }
-        },
-        "arch": "riscv64"
-    },
-    {
-        "name": "plct",
-        "version": "20231110",
-        "versioncode": 2,
-        "tag": [
-            "binary",
-            "toolchain"
-        ],
-        "desc": "RuyiSDK RISC-V Linux Toolchain 20231110 (maintained by PLCT)",
-        "origin": "PLCT Lab",
-        "files": {
-            "source": {
-                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.tar.xz",
-                "sha256": "3d5bcb254bfa4a0990ae6e5592047ba362da03c8a34e204574f614d99293b489"
-            },
-            "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-PLCT-Sources-riscv64-plct-linux-gnu.json",
-                "sha256": "a7865032e304f26019538fa775e71b19beb041166fce9c959a4fed70e370a56d"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231026-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.json",
+                "sha256": "6992e9046df1b6693ac88400d9db5dad97a7915438d686a1cc634c83e5fa7c67"
             }
         },
         "arch": "riscv64"
@@ -86,6 +64,28 @@
             }
         },
         "arch": "x86_64"
+    },
+    {
+        "name": "plct",
+        "version": "20231110",
+        "versioncode": 2,
+        "tag": [
+            "binary",
+            "toolchain"
+        ],
+        "desc": "RuyiSDK RISC-V Linux Toolchain 20231110 (maintained by PLCT)",
+        "origin": "PLCT Lab",
+        "files": {
+            "source": {
+                "url": "https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.tar.xz",
+                "sha256": "3d5bcb254bfa4a0990ae6e5592047ba362da03c8a34e204574f614d99293b489"
+            },
+            "manifest": {
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu.json",
+                "sha256": "c1c27917f6a9f10686ce7e0803744483ef7c93228d82c948aec3c327f3490a9e"
+            }
+        },
+        "arch": "riscv64"
     },
     {
         "name": "upstream",
@@ -125,8 +125,8 @@
                 "sha256": "33cd7d5cee609e674112f70386de2301ec9ecd3625e9bd4efff7a153f2dde6a3"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-Upstream-Sources-riscv64-unknown-linux-gnu.json",
-                "sha256": "8c7090f16272bb40e616cbd62fe8d75a0022f4177249b3eb83a33fb9b1c997f9"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-Upstream-Sources-HOST-riscv64-linux-gnu-riscv64-unknown-linux-gnu.json",
+                "sha256": "6387546fe900de9838390509387f3224c385b7eedb55285929b2ff299c44b69a"
             }
         },
         "arch": "riscv64"
@@ -147,8 +147,8 @@
                 "sha256": "f4715ebe27589c982586501085c8024099e2fed25f4b53e13af08542f5254ad7"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-T-Head-Sources-HOST-riscv64-linux-gnu-riscv64-plctxthead-linux-gnu.json",
-                "sha256": "c6023adbf16a69ef9ab5c5fad0182eee091f4e04e3b6c33100ed13b8eaafe81a"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-T-Head-Sources-riscv64-plctxthead-linux-gnu.json",
+                "sha256": "33893e7a30b5bcead4f0714719cef072b11253d482e48c8cbce3edcac3d1bcdb"
             }
         },
         "arch": "x86_64"
@@ -170,7 +170,7 @@
             },
             "manifest": {
                 "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231110-T-Head-Sources-HOST-riscv64-linux-gnu-riscv64-plctxthead-linux-gnu.json",
-                "sha256": "c6023adbf16a69ef9ab5c5fad0182eee091f4e04e3b6c33100ed13b8eaafe81a"
+                "sha256": "c74b74cfe33b98533156fd3850a946f20ed95590b3b0172743ec50cb85ceda43"
             }
         },
         "arch": "riscv64"
@@ -191,8 +191,8 @@
                 "sha256": "0e81b1e2529d946f0c13d8d91c803236695a084cc98d419a7b6f8cfd3c6fb3b8"
             },
             "manifest": {
-                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231118-T-Head-Sources-HOST-riscv64-linux-gnu-riscv64-plctxthead-linux-gnu.json",
-                "sha256": "1b4936eb351961fb9d2c7d6eed397e4e4372469a5f3b6e29c1456a0459f3dbb0"
+                "url": "https://raw.githubusercontent.com/ArielHeleneto/anrsm/master/example/RuyiSDK-20231118-T-Head-Sources-riscv64-plctxthead-linux-gnu.json",
+                "sha256": "59b38659c99ed2819fc398ae5882f2750857362ec8dacc464ce432ef0197dda7"
             }
         },
         "arch": "x86_64"

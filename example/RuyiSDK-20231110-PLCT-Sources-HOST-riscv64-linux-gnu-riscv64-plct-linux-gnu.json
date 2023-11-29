@@ -1,0 +1,149 @@
+{
+    "compression": "tarxz",
+    "softlink": [
+        {
+            "from": "ld.bfd",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ld.bfd"
+        },
+        {
+            "from": "gcov-dump",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcov-dump"
+        },
+        {
+            "from": "gcc-ar",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcc-ar"
+        },
+        {
+            "from": "ar",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ar"
+        },
+        {
+            "from": "objdump",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-objdump"
+        },
+        {
+            "from": "strip",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-strip"
+        },
+        {
+            "from": "lto-dump",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-lto-dump"
+        },
+        {
+            "from": "gprof",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gprof"
+        },
+        {
+            "from": "ct-ng.config",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ct-ng.config"
+        },
+        {
+            "from": "gcov",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcov"
+        },
+        {
+            "from": "ld",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ld"
+        },
+        {
+            "from": "elfedit",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-elfedit"
+        },
+        {
+            "from": "objcopy",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-objcopy"
+        },
+        {
+            "from": "cc",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-cc"
+        },
+        {
+            "from": "gcc-nm",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcc-nm"
+        },
+        {
+            "from": "gcc-ranlib",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcc-ranlib"
+        },
+        {
+            "from": "gcc",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcc"
+        },
+        {
+            "from": "gdb-add-index",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gdb-add-index"
+        },
+        {
+            "from": "gfortran",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gfortran"
+        },
+        {
+            "from": "as",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-as"
+        },
+        {
+            "from": "gccgo",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gccgo"
+        },
+        {
+            "from": "c++",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-c++"
+        },
+        {
+            "from": "c++filt",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-c++filt"
+        },
+        {
+            "from": "g++",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-g++"
+        },
+        {
+            "from": "ldd",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ldd"
+        },
+        {
+            "from": "populate",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-populate"
+        },
+        {
+            "from": "gcov-tool",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcov-tool"
+        },
+        {
+            "from": "strings",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-strings"
+        },
+        {
+            "from": "nm",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-nm"
+        },
+        {
+            "from": "cpp",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-cpp"
+        },
+        {
+            "from": "addr2line",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-addr2line"
+        },
+        {
+            "from": "gdb",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gdb"
+        },
+        {
+            "from": "readelf",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-readelf"
+        },
+        {
+            "from": "ranlib",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-ranlib"
+        },
+        {
+            "from": "size",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-size"
+        },
+        {
+            "from": "gcc-13.1.0",
+            "to": "RuyiSDK-20231110-PLCT-Sources-HOST-riscv64-linux-gnu-riscv64-plct-linux-gnu/bin/riscv64-plct-linux-gnu-gcc-13.1.0"
+        }
+    ]
+}
