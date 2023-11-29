@@ -64,7 +64,7 @@ def source_info(name: Annotated[str, typer.Argument(help="the package name you w
         print(f"Description: {info[id]['desc']}")
         print(f"Origin: {info[id]['origin']}")
         print(f"Arch: {info[id]['arch']}")
-        print(f"To cache this package, use `anrsm source cache {info[id]['name']} {info[id]['arch']} --version {info[id]['version']}")
+        print(f"To cache this package, use `anrsm source cache {info[id]['name']} {info[id]['arch']} --version {info[id]['version']}`")
 
 @app.command("cache")
 def source_install(name: Annotated[str, typer.Argument(help="the package name you want to look inside.",metavar="PackageName")], arch: Annotated[Optional[str], typer.Option("--arch",metavar="Architecture")] = None, ver: Annotated[Optional[str], typer.Option("--version",metavar="Version")] = None):
